@@ -25,7 +25,7 @@ Export every piece of information available through the Discord API about a Disc
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/discord-server-exporter.git
+git clone https://github.com/youngcoder45/discord-server-exporter.git
 cd discord-server-exporter
 
 # Install dependencies
