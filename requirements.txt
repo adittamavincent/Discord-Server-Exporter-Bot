@@ -1,0 +1,5 @@
+discord.py>=2.4.0
+aiofiles>=24.1.0
+orjson>=3.10.0
+rich>=13.7.0
+python-dotenv>=1.0.0

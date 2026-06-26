@@ -1,0 +1,39 @@
+# Discord Server Exporter .gitignore
+
+# Environment
+.env
+.env.local
+.env.production
+
+# Output
+output/
+exports/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Virtual environments
+venv/
+.venv/
+env/
