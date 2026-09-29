@@ -28,8 +28,11 @@ Export every piece of information available through the Discord API about a Disc
 git clone https://github.com/youngcoder45/discord-server-exporter.git
 cd discord-server-exporter
 
-# Install dependencies
-pip install -r requirements.txt
+# Install uv, if needed
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Create uv environment and install locked dependencies
+uv sync
 
 # Configure your bot token
 cp .env.example .env
@@ -68,7 +71,7 @@ intents.moderation = True
 ### Basic
 
 ```bash
-python export.py
+uv run python export.py
 ```
 
 Exports the first available guild the bot has access to.
@@ -76,38 +79,38 @@ Exports the first available guild the bot has access to.
 ### Specific Guild
 
 ```bash
-python export.py --guild 123456789012345678
+uv run python export.py --guild 123456789012345678
 ```
 
 ### Custom Output Directory
 
 ```bash
-python export.py --guild YOUR_GUILD_ID --output ./my-exports
+uv run python export.py --guild YOUR_GUILD_ID --output ./my-exports
 ```
 
 ### Selective Export
 
 ```bash
-python export.py --no-zip --no-markdown
-python export.py --guild YOUR_GUILD_ID --no-summary --no-prompt
+uv run python export.py --no-zip --no-markdown
+uv run python export.py --guild YOUR_GUILD_ID --no-summary --no-prompt
 ```
 
 ### Large Servers
 
 ```bash
-python export.py --guild YOUR_GUILD_ID --max-members 5000 --request-delay 1.0
+uv run python export.py --guild YOUR_GUILD_ID --max-members 5000 --request-delay 1.0
 ```
 
 ### Debug Mode
 
 ```bash
-python export.py --log-level DEBUG --log-file export.log
+uv run python export.py --log-level DEBUG --log-file export.log
 ```
 
 ### All Options
 
 ```
-python export.py --help
+uv run python export.py --help
 ```
 
 ## Output Structure
